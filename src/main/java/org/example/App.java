@@ -43,19 +43,19 @@ public class App
 
     private static void addPassenger()
     {
-        System.out.println("Enter new id > ");
+        System.out.print("Enter new id > ");
         int id = keyboard.nextInt();
-        System.out.println("Enter new contact name > ");
-        String name = keyboard.nextLine();
-        System.out.println("Enter new contact email > ");
-        String email = keyboard.nextLine();
-        System.out.println("Enter new phone number  > ");
-        String phone = keyboard.nextLine();
-        System.out.println("Enter new latitude  > ");
+        System.out.print("Enter new contact name > ");
+        String name = keyboard.next();
+        System.out.print("Enter new contact email > ");
+        String email = keyboard.next();
+        System.out.print("Enter new phone number  > ");
+        String phone = keyboard.next();
+        System.out.print("Enter new latitude  > ");
         double latitude = keyboard.nextInt();
-        System.out.println("Enter new longitude  > ");
+        System.out.print("Enter new longitude  > ");
         double longitude = keyboard.nextInt();
         Passenger newPassenger = Passenger.createPassenger(id, name, email, phone, latitude, longitude);
-        System.out.println("New Contact Added: id = " + id + ", name = " + name + ", email = " + email + ", phone = " + phone + ", latitude = " + latitude + ", longitude = " + longitude);
+        System.out.println(newPassenger);
     }
 }
