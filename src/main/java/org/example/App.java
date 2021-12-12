@@ -3,10 +3,6 @@ package org.example;
 import java.io.*;
 import java.util.Scanner;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     private static Scanner keyboard = new Scanner(System.in);
@@ -116,7 +112,7 @@ public class App
         String phone = keyboard.next();
         System.out.print("Latitude: ");
         double latitude = keyboard.nextDouble();
-        System.out.print("Longitude: ");
+        System.out.print("Latitude: ");
         double longitude = keyboard.nextDouble();
         System.out.println("Id:" + " " + id + " " + "Name:" + " " + name + "Email:" + " " + email + "Phone:" + " " + phone + "Latitude:" + " " + latitude + "Longitude:" + " " + longitude);
         keyboard.close();
