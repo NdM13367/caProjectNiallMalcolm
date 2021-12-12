@@ -8,12 +8,8 @@ public class Passenger
     private String phone;
     private LocationGPS location;
 
-    public Passenger(String name, String email, String phone,
-                     double latitude, double longitude)
+    public Passenger(int id, String name, String email, String phone, double latitude, double longitude)
     {
-        if (name == null )
-            throw new IllegalArgumentException("null arguments encountered");
-
         this.id = id;
         this.name = name;
         this.email = email;
@@ -21,47 +17,24 @@ public class Passenger
         this.location = new LocationGPS(latitude, longitude);
     }
 
-    public Passenger(int id, String name, String email, String phone,
-                     double latitude, double longitude)
-    {
-        if (name == null)
-            throw new IllegalArgumentException("null arguments encountered");
-
-        this.id = id;
-        this.name = name;
-        this.email = email;
-        this.phone = phone;
-        this.location = new LocationGPS(latitude, longitude);
-    }
-
-    public int getId()
-    {
+    public int getId() {
         return id;
     }
 
-    public String getName()
-    {
+    public String getName() {
         return name;
     }
 
-    public String getEmail()
-    {
+    public String getEmail() {
         return email;
     }
 
-    public String getPhone()
-    {
+    public String getPhone() {
         return phone;
     }
 
-    public LocationGPS getLocation()
-    {
+    public LocationGPS getLocation() {
         return location;
-    }
-
-    public static Passenger createPassenger(int id, String name, String email, String phone, double latitude, double longitude)
-    {
-        return new Passenger(id, name, email, phone, latitude, longitude);
     }
 
     @Override
